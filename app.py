@@ -68,9 +68,10 @@ def get_similar_houses(house_id, houses_file):
     
     # Define similarity criteria using pandas filtering
     similar_houses = houses[
-    (houses["location"] == target_house["location"]) | # Match location
-    (abs(houses["propertyDetails"].apply(lambda x: x["price"]) - target_house["propertyDetails"]["price"]) <= 50000) | # Price range
-    (houses["propertyDetails"].apply(lambda x: x["bedrooms"]) == target_house["propertyDetails"]["bedrooms"]) &  # Match bedrooms
+   (houses["propertyDetails"].apply(lambda x: x["bedrooms"]) == target_house["propertyDetails"]["bedrooms"])  | # Match location
+    (abs(houses["propertyDetails"].apply(lambda x: x["price"]) - target_house["propertyDetails"]["price"]) <= 50000)  # Price range
+   |
+    (houses["location"] == target_house["location"]) &  # Match bedrooms
     (houses.index != house_id - 1)  # Exclude the target house itself
 ]
 
