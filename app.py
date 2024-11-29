@@ -23,30 +23,58 @@ df = pd.DataFrame(data)
 
 import json
 
-def get_similar_houses(house_id, houses):
-    # Load the JSON data
-    
-    print(houses[house_id - 1],"target house")
-    # Check if the index is valid
-    if house_id - 1 < 0 or house_id - 1 >= len(houses):
-        return f"Invalid house ID: {house_id}"
-    
-    
-    # Use the index to get the target house
-    target_house = houses[house_id - 1]
-    # Define similarity criteria
-    def is_similar(house):
-        return (
-            house != target_house and  # Exclude the same house
-            house["location"] == target_house["location"] and  # Match location
-            abs(house["price"] - target_house["price"]) <= 50000 and  # Price range
-            house["bedrooms"] == target_house["bedrooms"]  # Match bedrooms
-        )
-    
-    # Find similar houses
-    similar_houses = [house for house in houses if is_similar(house)]
-    return similar_houses
+# def get_similar_houses(house_id, housesd):
+#     # Load the JSON data
+#     houses = pd.read_json('houses.json')
 
+#     print(type(houses), "Type of houses")
+
+#     print("---------------------------------------")
+#     print(houses[house_id - 1],"target house")
+#     # print(houses[house_id - 1],"target house")
+#     print("---------------------------------------")
+#     # Check if the index is valid
+#     if house_id - 1 < 0 or house_id - 1 >= len(houses):
+#         return f"Invalid house ID: {house_id}"
+    
+    
+#     # Use the index to get the target house
+#     target_house = houses[house_id - 1]
+#     # Define similarity criteria
+#     def is_similar(house):
+#         return (
+#             house != target_house and  # Exclude the same house
+#             house["location"] == target_house["location"] and  # Match location
+#             abs(house["price"] - target_house["price"]) <= 50000 and  # Price range
+#             house["bedrooms"] == target_house["bedrooms"]  # Match bedrooms
+#         )
+    
+#     # Find similar houses
+#     similar_houses = [house for house in houses if is_similar(house)]
+#     return similar_houses
+
+def get_similar_houses(house_id, houses_file):
+    # Load the JSON data as a pandas DataFrame
+    houses = pd.read_json(houses_file)
+    
+    
+    # Ensure the house_id is within range
+    if house_id - 1 < 0 or house_id - 1 >= len(houses):
+        return f"Invalid house ID: {house_id}. Expected ID between 1 and {len(houses)}."
+    
+    # Get the target house using iloc
+    target_house = houses.iloc[house_id - 1]
+    print(target_house, "Target house")
+    
+    # Define similarity criteria using pandas filtering
+    similar_houses = houses[
+    (houses["location"] == target_house["location"]) | # Match location
+    (abs(houses["propertyDetails"].apply(lambda x: x["price"]) - target_house["propertyDetails"]["price"]) <= 50000) | # Price range
+    (houses["propertyDetails"].apply(lambda x: x["bedrooms"]) == target_house["propertyDetails"]["bedrooms"]) &  # Match bedrooms
+    (houses.index != house_id - 1)  # Exclude the target house itself
+]
+
+    return similar_houses.to_dict(orient="records")  # Convert to a list of dictionaries
 
 
 # Example usage
@@ -174,7 +202,10 @@ def get_houses():
 
 @app.route('/houses/similar/<int:house_id>', methods=['GET'])
 def get_similar_houses_endpoint(house_id):
-    similar_houses = get_similar_houses(house_id,df)
+    print("-------------------------------------")
+    print(house_id)
+    print("-------------------------------------")
+    similar_houses = get_similar_houses(house_id,"houses.json")
     # return jsonify(similar_houses)
     return jsonify(similar_houses)
      
