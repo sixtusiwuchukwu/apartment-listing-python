@@ -1,0 +1,992 @@
+[
+    {
+        "title": "House 1",
+        "location": "City 1, Province 1",
+        "description": "A beautiful house in 1 city.",
+        "address": "1 Main Street, City 1",
+        "Sqft": 1500,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_1.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 3,
+            "garages": 1,
+            "bedrooms": 2,
+            "yearBuilt": 1990,
+            "propertyId": "P1000",
+            "price": 300000,
+            "bath": 2
+        },
+        "floorPlan": "https://example.com/floorplan_1.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": true,
+            "Swimming Pool": true,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": false,
+            "Parking": 2,
+            "Fireplace": true,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 2",
+        "location": "City 2, Province 2",
+        "description": "A beautiful house in 2 city.",
+        "address": "2 Main Street, City 2",
+        "Sqft": 1550,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_2.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 4,
+            "garages": 2,
+            "bedrooms": 3,
+            "yearBuilt": 1991,
+            "propertyId": "P1001",
+            "price": 310000,
+            "bath": 3
+        },
+        "floorPlan": "https://example.com/floorplan_2.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": false,
+            "Swimming Pool": false,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": true,
+            "Parking": 2,
+            "Fireplace": false,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 3",
+        "location": "City 3, Province 3",
+        "description": "A beautiful house in 3 city.",
+        "address": "3 Main Street, City 3",
+        "Sqft": 1600,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_3.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 5,
+            "garages": 1,
+            "bedrooms": 4,
+            "yearBuilt": 1992,
+            "propertyId": "P1002",
+            "price": 320000,
+            "bath": 2
+        },
+        "floorPlan": "https://example.com/floorplan_3.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": true,
+            "Swimming Pool": false,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": false,
+            "Parking": 2,
+            "Fireplace": true,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 4",
+        "location": "City 4, Province 4",
+        "description": "A beautiful house in 4 city.",
+        "address": "4 Main Street, City 4",
+        "Sqft": 1650,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_4.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 3,
+            "garages": 2,
+            "bedrooms": 2,
+            "yearBuilt": 1993,
+            "propertyId": "P1003",
+            "price": 330000,
+            "bath": 3
+        },
+        "floorPlan": "https://example.com/floorplan_4.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": false,
+            "Swimming Pool": true,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": true,
+            "Parking": 2,
+            "Fireplace": false,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 5",
+        "location": "City 5, Province 1",
+        "description": "A beautiful house in 5 city.",
+        "address": "5 Main Street, City 5",
+        "Sqft": 1700,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_5.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 4,
+            "garages": 1,
+            "bedrooms": 3,
+            "yearBuilt": 1994,
+            "propertyId": "P1004",
+            "price": 340000,
+            "bath": 2
+        },
+        "floorPlan": "https://example.com/floorplan_5.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": true,
+            "Swimming Pool": false,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": false,
+            "Parking": 2,
+            "Fireplace": true,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 6",
+        "location": "City 6, Province 2",
+        "description": "A beautiful house in 6 city.",
+        "address": "6 Main Street, City 6",
+        "Sqft": 1750,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_6.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 5,
+            "garages": 2,
+            "bedrooms": 4,
+            "yearBuilt": 1995,
+            "propertyId": "P1005",
+            "price": 350000,
+            "bath": 3
+        },
+        "floorPlan": "https://example.com/floorplan_6.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": false,
+            "Swimming Pool": false,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": true,
+            "Parking": 2,
+            "Fireplace": false,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 7",
+        "location": "City 7, Province 3",
+        "description": "A beautiful house in 7 city.",
+        "address": "7 Main Street, City 7",
+        "Sqft": 1800,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_7.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 3,
+            "garages": 1,
+            "bedrooms": 2,
+            "yearBuilt": 1996,
+            "propertyId": "P1006",
+            "price": 360000,
+            "bath": 2
+        },
+        "floorPlan": "https://example.com/floorplan_7.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": true,
+            "Swimming Pool": true,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": false,
+            "Parking": 2,
+            "Fireplace": true,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 8",
+        "location": "City 8, Province 4",
+        "description": "A beautiful house in 8 city.",
+        "address": "8 Main Street, City 8",
+        "Sqft": 1850,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_8.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 4,
+            "garages": 2,
+            "bedrooms": 3,
+            "yearBuilt": 1997,
+            "propertyId": "P1007",
+            "price": 370000,
+            "bath": 3
+        },
+        "floorPlan": "https://example.com/floorplan_8.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": false,
+            "Swimming Pool": false,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": true,
+            "Parking": 2,
+            "Fireplace": false,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 9",
+        "location": "City 9, Province 1",
+        "description": "A beautiful house in 9 city.",
+        "address": "9 Main Street, City 9",
+        "Sqft": 1900,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_9.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 5,
+            "garages": 1,
+            "bedrooms": 4,
+            "yearBuilt": 1998,
+            "propertyId": "P1008",
+            "price": 380000,
+            "bath": 2
+        },
+        "floorPlan": "https://example.com/floorplan_9.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": true,
+            "Swimming Pool": false,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": false,
+            "Parking": 2,
+            "Fireplace": true,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 10",
+        "location": "City 10, Province 2",
+        "description": "A beautiful house in 10 city.",
+        "address": "10 Main Street, City 10",
+        "Sqft": 1950,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_10.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 3,
+            "garages": 2,
+            "bedrooms": 2,
+            "yearBuilt": 1999,
+            "propertyId": "P1009",
+            "price": 390000,
+            "bath": 3
+        },
+        "floorPlan": "https://example.com/floorplan_10.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": false,
+            "Swimming Pool": true,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": true,
+            "Parking": 2,
+            "Fireplace": false,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 11",
+        "location": "City 11, Province 3",
+        "description": "A beautiful house in 11 city.",
+        "address": "11 Main Street, City 11",
+        "Sqft": 2000,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_11.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 4,
+            "garages": 1,
+            "bedrooms": 3,
+            "yearBuilt": 2000,
+            "propertyId": "P1010",
+            "price": 400000,
+            "bath": 2
+        },
+        "floorPlan": "https://example.com/floorplan_11.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": true,
+            "Swimming Pool": false,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": false,
+            "Parking": 2,
+            "Fireplace": true,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 12",
+        "location": "City 12, Province 4",
+        "description": "A beautiful house in 12 city.",
+        "address": "12 Main Street, City 12",
+        "Sqft": 2050,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_12.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 5,
+            "garages": 2,
+            "bedrooms": 4,
+            "yearBuilt": 2001,
+            "propertyId": "P1011",
+            "price": 410000,
+            "bath": 3
+        },
+        "floorPlan": "https://example.com/floorplan_12.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": false,
+            "Swimming Pool": false,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": true,
+            "Parking": 2,
+            "Fireplace": false,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 13",
+        "location": "City 13, Province 1",
+        "description": "A beautiful house in 13 city.",
+        "address": "13 Main Street, City 13",
+        "Sqft": 2100,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_13.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 3,
+            "garages": 1,
+            "bedrooms": 2,
+            "yearBuilt": 2002,
+            "propertyId": "P1012",
+            "price": 420000,
+            "bath": 2
+        },
+        "floorPlan": "https://example.com/floorplan_13.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": true,
+            "Swimming Pool": true,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": false,
+            "Parking": 2,
+            "Fireplace": true,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 14",
+        "location": "City 14, Province 2",
+        "description": "A beautiful house in 14 city.",
+        "address": "14 Main Street, City 14",
+        "Sqft": 2150,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_14.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 4,
+            "garages": 2,
+            "bedrooms": 3,
+            "yearBuilt": 2003,
+            "propertyId": "P1013",
+            "price": 430000,
+            "bath": 3
+        },
+        "floorPlan": "https://example.com/floorplan_14.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": false,
+            "Swimming Pool": false,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": true,
+            "Parking": 2,
+            "Fireplace": false,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 15",
+        "location": "City 15, Province 3",
+        "description": "A beautiful house in 15 city.",
+        "address": "15 Main Street, City 15",
+        "Sqft": 2200,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_15.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 5,
+            "garages": 1,
+            "bedrooms": 4,
+            "yearBuilt": 2004,
+            "propertyId": "P1014",
+            "price": 440000,
+            "bath": 2
+        },
+        "floorPlan": "https://example.com/floorplan_15.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": true,
+            "Swimming Pool": false,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": false,
+            "Parking": 2,
+            "Fireplace": true,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 16",
+        "location": "City 16, Province 4",
+        "description": "A beautiful house in 16 city.",
+        "address": "16 Main Street, City 16",
+        "Sqft": 2250,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_16.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 3,
+            "garages": 2,
+            "bedrooms": 2,
+            "yearBuilt": 2005,
+            "propertyId": "P1015",
+            "price": 450000,
+            "bath": 3
+        },
+        "floorPlan": "https://example.com/floorplan_16.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": false,
+            "Swimming Pool": true,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": true,
+            "Parking": 2,
+            "Fireplace": false,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 17",
+        "location": "City 17, Province 1",
+        "description": "A beautiful house in 17 city.",
+        "address": "17 Main Street, City 17",
+        "Sqft": 2300,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_17.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 4,
+            "garages": 1,
+            "bedrooms": 3,
+            "yearBuilt": 2006,
+            "propertyId": "P1016",
+            "price": 460000,
+            "bath": 2
+        },
+        "floorPlan": "https://example.com/floorplan_17.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": true,
+            "Swimming Pool": false,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": false,
+            "Parking": 2,
+            "Fireplace": true,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 18",
+        "location": "City 18, Province 2",
+        "description": "A beautiful house in 18 city.",
+        "address": "18 Main Street, City 18",
+        "Sqft": 2350,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_18.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 5,
+            "garages": 2,
+            "bedrooms": 4,
+            "yearBuilt": 2007,
+            "propertyId": "P1017",
+            "price": 470000,
+            "bath": 3
+        },
+        "floorPlan": "https://example.com/floorplan_18.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": false,
+            "Swimming Pool": false,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": true,
+            "Parking": 2,
+            "Fireplace": false,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 19",
+        "location": "City 19, Province 3",
+        "description": "A beautiful house in 19 city.",
+        "address": "19 Main Street, City 19",
+        "Sqft": 2400,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_19.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 3,
+            "garages": 1,
+            "bedrooms": 2,
+            "yearBuilt": 2008,
+            "propertyId": "P1018",
+            "price": 480000,
+            "bath": 2
+        },
+        "floorPlan": "https://example.com/floorplan_19.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": true,
+            "Swimming Pool": true,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": false,
+            "Parking": 2,
+            "Fireplace": true,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 20",
+        "location": "City 20, Province 4",
+        "description": "A beautiful house in 20 city.",
+        "address": "20 Main Street, City 20",
+        "Sqft": 2450,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_20.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 4,
+            "garages": 2,
+            "bedrooms": 3,
+            "yearBuilt": 2009,
+            "propertyId": "P1019",
+            "price": 490000,
+            "bath": 3
+        },
+        "floorPlan": "https://example.com/floorplan_20.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": false,
+            "Swimming Pool": false,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": true,
+            "Parking": 2,
+            "Fireplace": false,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 21",
+        "location": "City 21, Province 1",
+        "description": "A beautiful house in 21 city.",
+        "address": "21 Main Street, City 21",
+        "Sqft": 2500,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_21.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 5,
+            "garages": 1,
+            "bedrooms": 4,
+            "yearBuilt": 2010,
+            "propertyId": "P1020",
+            "price": 500000,
+            "bath": 2
+        },
+        "floorPlan": "https://example.com/floorplan_21.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": true,
+            "Swimming Pool": false,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": false,
+            "Parking": 2,
+            "Fireplace": true,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 22",
+        "location": "City 22, Province 2",
+        "description": "A beautiful house in 22 city.",
+        "address": "22 Main Street, City 22",
+        "Sqft": 2550,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_22.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 3,
+            "garages": 2,
+            "bedrooms": 2,
+            "yearBuilt": 2011,
+            "propertyId": "P1021",
+            "price": 510000,
+            "bath": 3
+        },
+        "floorPlan": "https://example.com/floorplan_22.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": false,
+            "Swimming Pool": true,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": true,
+            "Parking": 2,
+            "Fireplace": false,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 23",
+        "location": "City 23, Province 3",
+        "description": "A beautiful house in 23 city.",
+        "address": "23 Main Street, City 23",
+        "Sqft": 2600,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_23.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 4,
+            "garages": 1,
+            "bedrooms": 3,
+            "yearBuilt": 2012,
+            "propertyId": "P1022",
+            "price": 520000,
+            "bath": 2
+        },
+        "floorPlan": "https://example.com/floorplan_23.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": true,
+            "Swimming Pool": false,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": false,
+            "Parking": 2,
+            "Fireplace": true,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 24",
+        "location": "City 24, Province 4",
+        "description": "A beautiful house in 24 city.",
+        "address": "24 Main Street, City 24",
+        "Sqft": 2650,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_24.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 5,
+            "garages": 2,
+            "bedrooms": 4,
+            "yearBuilt": 2013,
+            "propertyId": "P1023",
+            "price": 530000,
+            "bath": 3
+        },
+        "floorPlan": "https://example.com/floorplan_24.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": false,
+            "Swimming Pool": false,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": true,
+            "Parking": 2,
+            "Fireplace": false,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 25",
+        "location": "City 25, Province 1",
+        "description": "A beautiful house in 25 city.",
+        "address": "25 Main Street, City 25",
+        "Sqft": 2700,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_25.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 3,
+            "garages": 1,
+            "bedrooms": 2,
+            "yearBuilt": 2014,
+            "propertyId": "P1024",
+            "price": 540000,
+            "bath": 2
+        },
+        "floorPlan": "https://example.com/floorplan_25.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": true,
+            "Swimming Pool": true,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": false,
+            "Parking": 2,
+            "Fireplace": true,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 26",
+        "location": "City 26, Province 2",
+        "description": "A beautiful house in 26 city.",
+        "address": "26 Main Street, City 26",
+        "Sqft": 2750,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_26.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 4,
+            "garages": 2,
+            "bedrooms": 3,
+            "yearBuilt": 2015,
+            "propertyId": "P1025",
+            "price": 550000,
+            "bath": 3
+        },
+        "floorPlan": "https://example.com/floorplan_26.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": false,
+            "Swimming Pool": false,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": true,
+            "Parking": 2,
+            "Fireplace": false,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 27",
+        "location": "City 27, Province 3",
+        "description": "A beautiful house in 27 city.",
+        "address": "27 Main Street, City 27",
+        "Sqft": 2800,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_27.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 5,
+            "garages": 1,
+            "bedrooms": 4,
+            "yearBuilt": 2016,
+            "propertyId": "P1026",
+            "price": 560000,
+            "bath": 2
+        },
+        "floorPlan": "https://example.com/floorplan_27.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": true,
+            "Swimming Pool": false,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": false,
+            "Parking": 2,
+            "Fireplace": true,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 28",
+        "location": "City 28, Province 4",
+        "description": "A beautiful house in 28 city.",
+        "address": "28 Main Street, City 28",
+        "Sqft": 2850,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_28.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 3,
+            "garages": 2,
+            "bedrooms": 2,
+            "yearBuilt": 2017,
+            "propertyId": "P1027",
+            "price": 570000,
+            "bath": 3
+        },
+        "floorPlan": "https://example.com/floorplan_28.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": false,
+            "Swimming Pool": true,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": true,
+            "Parking": 2,
+            "Fireplace": false,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 29",
+        "location": "City 29, Province 1",
+        "description": "A beautiful house in 29 city.",
+        "address": "29 Main Street, City 29",
+        "Sqft": 2900,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_29.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 4,
+            "garages": 1,
+            "bedrooms": 3,
+            "yearBuilt": 2018,
+            "propertyId": "P1028",
+            "price": 580000,
+            "bath": 2
+        },
+        "floorPlan": "https://example.com/floorplan_29.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": true,
+            "Swimming Pool": false,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": false,
+            "Parking": 2,
+            "Fireplace": true,
+            "Refrigerator": true
+        }
+    },
+    {
+        "title": "House 30",
+        "location": "City 30, Province 2",
+        "description": "A beautiful house in 30 city.",
+        "address": "30 Main Street, City 30",
+        "Sqft": 2950,
+        "propertyDetails": {
+            "images": [
+                "https://example.com/image_30.jpg"
+            ],
+            "propertyStatus": "For Sale",
+            "propertyType": "Single Family Home",
+            "rooms": 5,
+            "garages": 2,
+            "bedrooms": 4,
+            "yearBuilt": 2019,
+            "propertyId": "P1029",
+            "price": 590000,
+            "bath": 3
+        },
+        "floorPlan": "https://example.com/floorplan_30.jpg",
+        "propertyFeatures": {
+            "Air Conditioned": false,
+            "Swimming Pool": false,
+            "Fitness Gym": false,
+            "Laundry": true,
+            "Window Coverings": true,
+            "Security Garage": true,
+            "Parking": 2,
+            "Fireplace": false,
+            "Refrigerator": true
+        }
+    }
+]
