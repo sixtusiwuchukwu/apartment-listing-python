@@ -1,5 +1,6 @@
 import math
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 import pandas as pd
 import numpy as np
 import json
@@ -9,7 +10,8 @@ from sklearn.pipeline import Pipeline
 import pickle
 
 app = Flask(__name__)
-
+# Enable CORS for the entire application
+CORS(app)
 # Load the trained model
 # with open('model.pkl', 'rb') as f:
 #     model = pickle.load(f)
