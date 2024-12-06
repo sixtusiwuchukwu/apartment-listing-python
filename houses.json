@@ -7,11 +7,13 @@
         "Sqft": 1500,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_1.jpg"
+                "assets/img/property/property-1.jpg",
+                "assets/img/property/property-2.jpg",
+                "assets/img/property/property-3.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 3,
+            "bathrooms": 3,
             "garages": 1,
             "bedrooms": 2,
             "yearBuilt": 1990,
@@ -19,7 +21,7 @@
             "price": 300000,
             "bath": 2
         },
-        "floorPlan": "https://example.com/floorplan_1.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": true,
             "Swimming Pool": true,
@@ -30,7 +32,17 @@
             "Parking": 2,
             "Fireplace": true,
             "Refrigerator": true
-        }
+        },
+        "region": "Province 1",
+        "city": "City 1",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "1",
+            "city."
+        ]
     },
     {
         "title": "House 2",
@@ -40,11 +52,13 @@
         "Sqft": 1550,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_2.jpg"
+                "assets/img/property/property-4.jpg",
+                "assets/img/property/property-5.jpg",
+                "assets/img/property/property-6.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 4,
+            "bathrooms": 4,
             "garages": 2,
             "bedrooms": 3,
             "yearBuilt": 1991,
@@ -52,7 +66,7 @@
             "price": 310000,
             "bath": 3
         },
-        "floorPlan": "https://example.com/floorplan_2.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": false,
             "Swimming Pool": false,
@@ -63,7 +77,17 @@
             "Parking": 2,
             "Fireplace": false,
             "Refrigerator": true
-        }
+        },
+        "region": "Province 2",
+        "city": "City 2",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "2",
+            "city."
+        ]
     },
     {
         "title": "House 3",
@@ -73,11 +97,13 @@
         "Sqft": 1600,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_3.jpg"
+                "assets/img/property/property-7.jpg",
+                "assets/img/property/property-8.jpg",
+                "assets/img/property/property-9.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 5,
+            "bathrooms": 5,
             "garages": 1,
             "bedrooms": 3,
             "yearBuilt": 1992,
@@ -85,7 +111,7 @@
             "price": 320000,
             "bath": 2
         },
-        "floorPlan": "https://example.com/floorplan_3.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": true,
             "Swimming Pool": false,
@@ -96,7 +122,17 @@
             "Parking": 2,
             "Fireplace": true,
             "Refrigerator": true
-        }
+        },
+        "region": "Province 3",
+        "city": "City 3",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "3",
+            "city."
+        ]
     },
     {
         "title": "House 4",
@@ -106,11 +142,13 @@
         "Sqft": 1650,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_4.jpg"
+                "assets/img/property/property-10.jpg",
+                "assets/img/property/property-11.jpg",
+                "assets/img/property/property-12.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 3,
+            "bathrooms": 3,
             "garages": 2,
             "bedrooms": 2,
             "yearBuilt": 1993,
@@ -118,7 +156,7 @@
             "price": 330000,
             "bath": 3
         },
-        "floorPlan": "https://example.com/floorplan_4.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": false,
             "Swimming Pool": true,
@@ -129,7 +167,17 @@
             "Parking": 2,
             "Fireplace": false,
             "Refrigerator": true
-        }
+        },
+        "region": "Province 4",
+        "city": "City 4",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "4",
+            "city."
+        ]
     },
     {
         "title": "House 5",
@@ -139,11 +187,13 @@
         "Sqft": 1700,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_5.jpg"
+                "assets/img/property/property-13.jpg",
+                "assets/img/property/property-14.jpg",
+                "assets/img/property/property-15.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 4,
+            "bathrooms": 4,
             "garages": 1,
             "bedrooms": 3,
             "yearBuilt": 1994,
@@ -151,7 +201,7 @@
             "price": 340000,
             "bath": 2
         },
-        "floorPlan": "https://example.com/floorplan_5.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": true,
             "Swimming Pool": false,
@@ -162,7 +212,17 @@
             "Parking": 2,
             "Fireplace": true,
             "Refrigerator": true
-        }
+        },
+        "region": "Province 1",
+        "city": "City 5",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "5",
+            "city."
+        ]
     },
     {
         "title": "House 6",
@@ -172,11 +232,13 @@
         "Sqft": 1750,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_6.jpg"
+                "assets/img/property/property-16.jpg",
+                "assets/img/property/property-17.jpg",
+                "assets/img/property/property-18.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 5,
+            "bathrooms": 5,
             "garages": 2,
             "bedrooms": 4,
             "yearBuilt": 1995,
@@ -184,7 +246,7 @@
             "price": 350000,
             "bath": 3
         },
-        "floorPlan": "https://example.com/floorplan_6.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": false,
             "Swimming Pool": false,
@@ -195,7 +257,17 @@
             "Parking": 2,
             "Fireplace": false,
             "Refrigerator": true
-        }
+        },
+        "region": "Province 2",
+        "city": "City 6",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "6",
+            "city."
+        ]
     },
     {
         "title": "House 7",
@@ -205,11 +277,13 @@
         "Sqft": 1800,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_7.jpg"
+                "assets/img/property/property-19.jpg",
+                "assets/img/property/property-20.jpg",
+                "assets/img/property/property-21.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 3,
+            "bathrooms": 3,
             "garages": 1,
             "bedrooms": 2,
             "yearBuilt": 1996,
@@ -217,7 +291,7 @@
             "price": 360000,
             "bath": 2
         },
-        "floorPlan": "https://example.com/floorplan_7.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": true,
             "Swimming Pool": true,
@@ -228,7 +302,17 @@
             "Parking": 2,
             "Fireplace": true,
             "Refrigerator": true
-        }
+        },
+        "region": "Province 3",
+        "city": "City 7",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "7",
+            "city."
+        ]
     },
     {
         "title": "House 8",
@@ -238,11 +322,13 @@
         "Sqft": 1850,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_8.jpg"
+                "assets/img/property/property-22.jpg",
+                "assets/img/property/property-23.jpg",
+                "assets/img/property/property-24.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 4,
+            "bathrooms": 4,
             "garages": 2,
             "bedrooms": 3,
             "yearBuilt": 1997,
@@ -250,7 +336,7 @@
             "price": 370000,
             "bath": 3
         },
-        "floorPlan": "https://example.com/floorplan_8.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": false,
             "Swimming Pool": false,
@@ -261,7 +347,17 @@
             "Parking": 2,
             "Fireplace": false,
             "Refrigerator": true
-        }
+        },
+        "region": "Province 4",
+        "city": "City 8",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "8",
+            "city."
+        ]
     },
     {
         "title": "House 9",
@@ -271,11 +367,13 @@
         "Sqft": 1900,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_9.jpg"
+                "assets/img/property/property-25.jpg",
+                "assets/img/property/property-26.jpg",
+                "assets/img/property/property-27.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 5,
+            "bathrooms": 5,
             "garages": 1,
             "bedrooms": 4,
             "yearBuilt": 1998,
@@ -283,7 +381,7 @@
             "price": 380000,
             "bath": 2
         },
-        "floorPlan": "https://example.com/floorplan_9.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": true,
             "Swimming Pool": false,
@@ -294,7 +392,17 @@
             "Parking": 2,
             "Fireplace": true,
             "Refrigerator": true
-        }
+        },
+        "region": "Province 1",
+        "city": "City 9",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "9",
+            "city."
+        ]
     },
     {
         "title": "House 10",
@@ -304,11 +412,13 @@
         "Sqft": 1950,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_10.jpg"
+                "assets/img/property/property-28.jpg",
+                "assets/img/property/property-1.jpg",
+                "assets/img/property/property-2.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 3,
+            "bathrooms": 3,
             "garages": 2,
             "bedrooms": 2,
             "yearBuilt": 1999,
@@ -316,7 +426,7 @@
             "price": 390000,
             "bath": 3
         },
-        "floorPlan": "https://example.com/floorplan_10.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": false,
             "Swimming Pool": true,
@@ -327,7 +437,17 @@
             "Parking": 2,
             "Fireplace": false,
             "Refrigerator": true
-        }
+        },
+        "region": "Province 2",
+        "city": "City 10",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "10",
+            "city."
+        ]
     },
     {
         "title": "House 11",
@@ -337,11 +457,13 @@
         "Sqft": 2000,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_11.jpg"
+                "assets/img/property/property-3.jpg",
+                "assets/img/property/property-4.jpg",
+                "assets/img/property/property-5.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 4,
+            "bathrooms": 4,
             "garages": 1,
             "bedrooms": 3,
             "yearBuilt": 2000,
@@ -349,7 +471,7 @@
             "price": 400000,
             "bath": 2
         },
-        "floorPlan": "https://example.com/floorplan_11.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": true,
             "Swimming Pool": false,
@@ -360,7 +482,17 @@
             "Parking": 2,
             "Fireplace": true,
             "Refrigerator": true
-        }
+        },
+        "region": "Province 3",
+        "city": "City 11",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "11",
+            "city."
+        ]
     },
     {
         "title": "House 12",
@@ -370,11 +502,13 @@
         "Sqft": 2050,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_12.jpg"
+                "assets/img/property/property-6.jpg",
+                "assets/img/property/property-7.jpg",
+                "assets/img/property/property-8.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 5,
+            "bathrooms": 5,
             "garages": 2,
             "bedrooms": 4,
             "yearBuilt": 2001,
@@ -382,7 +516,7 @@
             "price": 410000,
             "bath": 3
         },
-        "floorPlan": "https://example.com/floorplan_12.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": false,
             "Swimming Pool": false,
@@ -393,7 +527,17 @@
             "Parking": 2,
             "Fireplace": false,
             "Refrigerator": true
-        }
+        },
+        "region": "Province 4",
+        "city": "City 12",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "12",
+            "city."
+        ]
     },
     {
         "title": "House 13",
@@ -403,11 +547,13 @@
         "Sqft": 2100,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_13.jpg"
+                "assets/img/property/property-9.jpg",
+                "assets/img/property/property-10.jpg",
+                "assets/img/property/property-11.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 3,
+            "bathrooms": 3,
             "garages": 1,
             "bedrooms": 2,
             "yearBuilt": 2002,
@@ -415,7 +561,7 @@
             "price": 420000,
             "bath": 2
         },
-        "floorPlan": "https://example.com/floorplan_13.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": true,
             "Swimming Pool": true,
@@ -426,7 +572,17 @@
             "Parking": 2,
             "Fireplace": true,
             "Refrigerator": true
-        }
+        },
+        "region": "Province 1",
+        "city": "City 13",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "13",
+            "city."
+        ]
     },
     {
         "title": "House 14",
@@ -436,11 +592,13 @@
         "Sqft": 2150,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_14.jpg"
+                "assets/img/property/property-12.jpg",
+                "assets/img/property/property-13.jpg",
+                "assets/img/property/property-14.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 4,
+            "bathrooms": 4,
             "garages": 2,
             "bedrooms": 3,
             "yearBuilt": 2003,
@@ -448,7 +606,7 @@
             "price": 430000,
             "bath": 3
         },
-        "floorPlan": "https://example.com/floorplan_14.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": false,
             "Swimming Pool": false,
@@ -459,7 +617,17 @@
             "Parking": 2,
             "Fireplace": false,
             "Refrigerator": true
-        }
+        },
+        "region": "Province 2",
+        "city": "City 14",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "14",
+            "city."
+        ]
     },
     {
         "title": "House 15",
@@ -469,11 +637,13 @@
         "Sqft": 2200,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_15.jpg"
+                "assets/img/property/property-15.jpg",
+                "assets/img/property/property-16.jpg",
+                "assets/img/property/property-17.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 5,
+            "bathrooms": 5,
             "garages": 1,
             "bedrooms": 4,
             "yearBuilt": 2004,
@@ -481,7 +651,7 @@
             "price": 440000,
             "bath": 2
         },
-        "floorPlan": "https://example.com/floorplan_15.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": true,
             "Swimming Pool": false,
@@ -492,7 +662,17 @@
             "Parking": 2,
             "Fireplace": true,
             "Refrigerator": true
-        }
+        },
+        "region": "Province 3",
+        "city": "City 15",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "15",
+            "city."
+        ]
     },
     {
         "title": "House 16",
@@ -502,11 +682,13 @@
         "Sqft": 2250,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_16.jpg"
+                "assets/img/property/property-18.jpg",
+                "assets/img/property/property-19.jpg",
+                "assets/img/property/property-20.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 3,
+            "bathrooms": 3,
             "garages": 2,
             "bedrooms": 2,
             "yearBuilt": 2005,
@@ -514,7 +696,7 @@
             "price": 450000,
             "bath": 3
         },
-        "floorPlan": "https://example.com/floorplan_16.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": false,
             "Swimming Pool": true,
@@ -525,7 +707,17 @@
             "Parking": 2,
             "Fireplace": false,
             "Refrigerator": true
-        }
+        },
+        "region": "Province 4",
+        "city": "City 16",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "16",
+            "city."
+        ]
     },
     {
         "title": "House 17",
@@ -535,11 +727,13 @@
         "Sqft": 2300,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_17.jpg"
+                "assets/img/property/property-21.jpg",
+                "assets/img/property/property-22.jpg",
+                "assets/img/property/property-23.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 4,
+            "bathrooms": 4,
             "garages": 1,
             "bedrooms": 3,
             "yearBuilt": 2006,
@@ -547,7 +741,7 @@
             "price": 460000,
             "bath": 2
         },
-        "floorPlan": "https://example.com/floorplan_17.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": true,
             "Swimming Pool": false,
@@ -558,7 +752,17 @@
             "Parking": 2,
             "Fireplace": true,
             "Refrigerator": true
-        }
+        },
+        "region": "Province 1",
+        "city": "City 17",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "17",
+            "city."
+        ]
     },
     {
         "title": "House 18",
@@ -568,11 +772,13 @@
         "Sqft": 2350,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_18.jpg"
+                "assets/img/property/property-24.jpg",
+                "assets/img/property/property-25.jpg",
+                "assets/img/property/property-26.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 5,
+            "bathrooms": 5,
             "garages": 2,
             "bedrooms": 4,
             "yearBuilt": 2007,
@@ -580,7 +786,7 @@
             "price": 470000,
             "bath": 3
         },
-        "floorPlan": "https://example.com/floorplan_18.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": false,
             "Swimming Pool": false,
@@ -591,7 +797,17 @@
             "Parking": 2,
             "Fireplace": false,
             "Refrigerator": true
-        }
+        },
+        "region": "Province 2",
+        "city": "City 18",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "18",
+            "city."
+        ]
     },
     {
         "title": "House 19",
@@ -601,11 +817,13 @@
         "Sqft": 2400,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_19.jpg"
+                "assets/img/property/property-27.jpg",
+                "assets/img/property/property-28.jpg",
+                "assets/img/property/property-1.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 3,
+            "bathrooms": 3,
             "garages": 1,
             "bedrooms": 2,
             "yearBuilt": 2008,
@@ -613,7 +831,7 @@
             "price": 480000,
             "bath": 2
         },
-        "floorPlan": "https://example.com/floorplan_19.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": true,
             "Swimming Pool": true,
@@ -624,7 +842,17 @@
             "Parking": 2,
             "Fireplace": true,
             "Refrigerator": true
-        }
+        },
+        "region": "Province 3",
+        "city": "City 19",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "19",
+            "city."
+        ]
     },
     {
         "title": "House 20",
@@ -634,11 +862,13 @@
         "Sqft": 2450,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_20.jpg"
+                "assets/img/property/property-2.jpg",
+                "assets/img/property/property-3.jpg",
+                "assets/img/property/property-4.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 4,
+            "bathrooms": 4,
             "garages": 2,
             "bedrooms": 3,
             "yearBuilt": 2009,
@@ -646,7 +876,7 @@
             "price": 490000,
             "bath": 3
         },
-        "floorPlan": "https://example.com/floorplan_20.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": false,
             "Swimming Pool": false,
@@ -657,7 +887,17 @@
             "Parking": 2,
             "Fireplace": false,
             "Refrigerator": true
-        }
+        },
+        "region": "Province 4",
+        "city": "City 20",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "20",
+            "city."
+        ]
     },
     {
         "title": "House 21",
@@ -667,11 +907,13 @@
         "Sqft": 2500,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_21.jpg"
+                "assets/img/property/property-5.jpg",
+                "assets/img/property/property-6.jpg",
+                "assets/img/property/property-7.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 5,
+            "bathrooms": 5,
             "garages": 1,
             "bedrooms": 4,
             "yearBuilt": 2010,
@@ -679,7 +921,7 @@
             "price": 500000,
             "bath": 2
         },
-        "floorPlan": "https://example.com/floorplan_21.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": true,
             "Swimming Pool": false,
@@ -690,7 +932,17 @@
             "Parking": 2,
             "Fireplace": true,
             "Refrigerator": true
-        }
+        },
+        "region": "Province 1",
+        "city": "City 21",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "21",
+            "city."
+        ]
     },
     {
         "title": "House 22",
@@ -700,11 +952,13 @@
         "Sqft": 2550,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_22.jpg"
+                "assets/img/property/property-8.jpg",
+                "assets/img/property/property-9.jpg",
+                "assets/img/property/property-10.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 3,
+            "bathrooms": 3,
             "garages": 2,
             "bedrooms": 2,
             "yearBuilt": 2011,
@@ -712,7 +966,7 @@
             "price": 510000,
             "bath": 3
         },
-        "floorPlan": "https://example.com/floorplan_22.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": false,
             "Swimming Pool": true,
@@ -723,7 +977,17 @@
             "Parking": 2,
             "Fireplace": false,
             "Refrigerator": true
-        }
+        },
+        "region": "Province 2",
+        "city": "City 22",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "22",
+            "city."
+        ]
     },
     {
         "title": "House 23",
@@ -733,11 +997,13 @@
         "Sqft": 2600,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_23.jpg"
+                "assets/img/property/property-11.jpg",
+                "assets/img/property/property-12.jpg",
+                "assets/img/property/property-13.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 4,
+            "bathrooms": 4,
             "garages": 1,
             "bedrooms": 3,
             "yearBuilt": 2012,
@@ -745,7 +1011,7 @@
             "price": 520000,
             "bath": 2
         },
-        "floorPlan": "https://example.com/floorplan_23.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": true,
             "Swimming Pool": false,
@@ -756,7 +1022,17 @@
             "Parking": 2,
             "Fireplace": true,
             "Refrigerator": true
-        }
+        },
+        "region": "Province 3",
+        "city": "City 23",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "23",
+            "city."
+        ]
     },
     {
         "title": "House 24",
@@ -766,11 +1042,13 @@
         "Sqft": 2650,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_24.jpg"
+                "assets/img/property/property-14.jpg",
+                "assets/img/property/property-15.jpg",
+                "assets/img/property/property-16.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 5,
+            "bathrooms": 5,
             "garages": 2,
             "bedrooms": 4,
             "yearBuilt": 2013,
@@ -778,7 +1056,7 @@
             "price": 530000,
             "bath": 3
         },
-        "floorPlan": "https://example.com/floorplan_24.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": false,
             "Swimming Pool": false,
@@ -789,7 +1067,17 @@
             "Parking": 2,
             "Fireplace": false,
             "Refrigerator": true
-        }
+        },
+        "region": "Province 4",
+        "city": "City 24",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "24",
+            "city."
+        ]
     },
     {
         "title": "House 25",
@@ -799,11 +1087,13 @@
         "Sqft": 2700,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_25.jpg"
+                "assets/img/property/property-17.jpg",
+                "assets/img/property/property-18.jpg",
+                "assets/img/property/property-19.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 3,
+            "bathrooms": 3,
             "garages": 1,
             "bedrooms": 2,
             "yearBuilt": 2014,
@@ -811,7 +1101,7 @@
             "price": 540000,
             "bath": 2
         },
-        "floorPlan": "https://example.com/floorplan_25.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": true,
             "Swimming Pool": true,
@@ -822,7 +1112,17 @@
             "Parking": 2,
             "Fireplace": true,
             "Refrigerator": true
-        }
+        },
+        "region": "Province 1",
+        "city": "City 25",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "25",
+            "city."
+        ]
     },
     {
         "title": "House 26",
@@ -832,11 +1132,13 @@
         "Sqft": 2750,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_26.jpg"
+                "assets/img/property/property-20.jpg",
+                "assets/img/property/property-21.jpg",
+                "assets/img/property/property-22.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 4,
+            "bathrooms": 4,
             "garages": 2,
             "bedrooms": 3,
             "yearBuilt": 2015,
@@ -844,7 +1146,7 @@
             "price": 550000,
             "bath": 3
         },
-        "floorPlan": "https://example.com/floorplan_26.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": false,
             "Swimming Pool": false,
@@ -855,7 +1157,17 @@
             "Parking": 2,
             "Fireplace": false,
             "Refrigerator": true
-        }
+        },
+        "region": "Province 2",
+        "city": "City 26",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "26",
+            "city."
+        ]
     },
     {
         "title": "House 27",
@@ -865,11 +1177,13 @@
         "Sqft": 2800,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_27.jpg"
+                "assets/img/property/property-23.jpg",
+                "assets/img/property/property-24.jpg",
+                "assets/img/property/property-25.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 5,
+            "bathrooms": 5,
             "garages": 1,
             "bedrooms": 4,
             "yearBuilt": 2016,
@@ -877,7 +1191,7 @@
             "price": 560000,
             "bath": 2
         },
-        "floorPlan": "https://example.com/floorplan_27.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": true,
             "Swimming Pool": false,
@@ -888,7 +1202,17 @@
             "Parking": 2,
             "Fireplace": true,
             "Refrigerator": true
-        }
+        },
+        "region": "Province 3",
+        "city": "City 27",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "27",
+            "city."
+        ]
     },
     {
         "title": "House 28",
@@ -898,11 +1222,13 @@
         "Sqft": 2850,
         "propertyDetails": {
             "images": [
-                "https://example.com/image_28.jpg"
+                "assets/img/property/property-26.jpg",
+                "assets/img/property/property-27.jpg",
+                "assets/img/property/property-28.jpg"
             ],
             "propertyStatus": "For Sale",
             "propertyType": "Single Family Home",
-            "rooms": 3,
+            "bathrooms": 3,
             "garages": 2,
             "bedrooms": 2,
             "yearBuilt": 2017,
@@ -910,7 +1236,7 @@
             "price": 570000,
             "bath": 3
         },
-        "floorPlan": "https://example.com/floorplan_28.jpg",
+        "floorPlan": "assets/img/property/floor-plan.png",
         "propertyFeatures": {
             "Air Conditioned": false,
             "Swimming Pool": true,
@@ -921,72 +1247,16 @@
             "Parking": 2,
             "Fireplace": false,
             "Refrigerator": true
-        }
-    },
-    {
-        "title": "House 29",
-        "location": "City 29, Province 1",
-        "description": "A beautiful house in 29 city.",
-        "address": "29 Main Street, City 29",
-        "Sqft": 2900,
-        "propertyDetails": {
-            "images": [
-                "https://example.com/image_29.jpg"
-            ],
-            "propertyStatus": "For Sale",
-            "propertyType": "Single Family Home",
-            "rooms": 4,
-            "garages": 1,
-            "bedrooms": 3,
-            "yearBuilt": 2018,
-            "propertyId": "P1028",
-            "price": 580000,
-            "bath": 2
         },
-        "floorPlan": "https://example.com/floorplan_29.jpg",
-        "propertyFeatures": {
-            "Air Conditioned": true,
-            "Swimming Pool": false,
-            "Fitness Gym": false,
-            "Laundry": true,
-            "Window Coverings": true,
-            "Security Garage": false,
-            "Parking": 2,
-            "Fireplace": true,
-            "Refrigerator": true
-        }
-    },
-    {
-        "title": "House 30",
-        "location": "City 30, Province 2",
-        "description": "A beautiful house in 30 city.",
-        "address": "30 Main Street, City 30",
-        "Sqft": 2950,
-        "propertyDetails": {
-            "images": [
-                "https://example.com/image_30.jpg"
-            ],
-            "propertyStatus": "For Sale",
-            "propertyType": "Single Family Home",
-            "rooms": 5,
-            "garages": 2,
-            "bedrooms": 4,
-            "yearBuilt": 2019,
-            "propertyId": "P1029",
-            "price": 590000,
-            "bath": 3
-        },
-        "floorPlan": "https://example.com/floorplan_30.jpg",
-        "propertyFeatures": {
-            "Air Conditioned": false,
-            "Swimming Pool": false,
-            "Fitness Gym": false,
-            "Laundry": true,
-            "Window Coverings": true,
-            "Security Garage": true,
-            "Parking": 2,
-            "Fireplace": false,
-            "Refrigerator": true
-        }
+        "region": "Province 4",
+        "city": "City 28",
+        "keywords": [
+            "a",
+            "beautiful",
+            "house",
+            "in",
+            "28",
+            "city."
+        ]
     }
 ]

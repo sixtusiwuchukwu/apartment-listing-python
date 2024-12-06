@@ -1,3 +1,4 @@
+import math
 from flask import Flask, jsonify, request
 import pandas as pd
 import numpy as np
@@ -53,29 +54,65 @@ import json
 #     similar_houses = [house for house in houses if is_similar(house)]
 #     return similar_houses
 
-def get_similar_houses(house_id, houses_file):
+import pandas as pd
+
+import pandas as pd
+
+def get_similar_houses(house_id, houses_file, page=1, page_size=2):
+    """
+    Find similar houses based on specified criteria and paginate results.
+
+    Parameters:
+    - house_id: The ID of the target house.
+    - houses_file: Path to the JSON file containing house data.
+    - page: The current page number (default is 1).
+    - page_size: The number of results per page (default is 10).
+
+    Returns:
+    - A dictionary containing the current page, total pages, and similar houses as a list of dictionaries.
+    """
     # Load the JSON data as a pandas DataFrame
     houses = pd.read_json(houses_file)
     
-    
-    # Ensure the house_id is within range
-    if house_id - 1 < 0 or house_id - 1 >= len(houses):
-        return f"Invalid house ID: {house_id}. Expected ID between 1 and {len(houses)}."
-    
-    # Get the target house using iloc
-    target_house = houses.iloc[house_id - 1]
-    print(target_house, "Target house")
-    
-    # Define similarity criteria using pandas filtering
-    similar_houses = houses[
-   (houses["propertyDetails"].apply(lambda x: x["bedrooms"]) == target_house["propertyDetails"]["bedrooms"])  | # Match location
-    (abs(houses["propertyDetails"].apply(lambda x: x["price"]) - target_house["propertyDetails"]["price"]) <= 50000)  # Price range
-   |
-    (houses["location"] == target_house["location"]) &  # Match bedrooms
-    (houses.index != house_id - 1)  # Exclude the target house itself
-]
+    # Ensure the house_id exists in the dataset
+    target_house = houses[houses["propertyDetails"].apply(lambda x: x.get("propertyId") == house_id)]
+    if target_house.empty:
+        return {"error": f"Invalid house ID: {house_id}. No matching house found."}
 
-    return similar_houses.to_dict(orient="records")  # Convert to a list of dictionaries
+    # Extract target house details
+    target_house = target_house.iloc[0]  # Extract the first (and only) matching row
+
+    # Define similarity criteria
+    similar_houses = houses[
+        (
+            houses["propertyDetails"].apply(lambda x: x.get("bedrooms")) == target_house["propertyDetails"]["bedrooms"]
+        ) | (
+            abs(houses["propertyDetails"].apply(lambda x: x.get("price", 0)) - target_house["propertyDetails"]["price"]) <= 50000
+        ) | (
+            houses["location"] == target_house["location"]
+        )
+    ]
+
+    # Exclude the target house itself
+    similar_houses = similar_houses[houses["propertyDetails"].apply(lambda x: x.get("propertyId")) != house_id]
+
+    # Apply pagination
+    total_results = len(similar_houses)
+    total_pages = (total_results + page_size - 1) // page_size  # Calculate total pages
+    start = (page - 1) * page_size
+    end = start + page_size
+
+    # Slice the DataFrame for the current page
+    paginated_houses = similar_houses.iloc[start:end]
+
+    # Return the paginated results
+    return {
+        "page": page,
+        "page_size": page_size,
+        "total_pages": total_pages,
+        "total_results": total_results,
+        "similar_houses": paginated_houses.to_dict(orient="records")
+    }
 
 
 # Example usage
@@ -87,107 +124,116 @@ def get_similar_houses(house_id, houses_file):
 
 
 # Endpoint to get single house details
-@app.route('/house/<int:house_id>')
-def get_house_details(house_id):
+@app.route('/house/<property_id>', methods=['GET'])
+def get_house_details(property_id):
     try:
-        house_details = df.iloc[house_id -1 ].to_dict()
-        return jsonify(house_details)
-    except IndexError:
-        return jsonify({'error': 'House not found'}), 404
+        # Ensure property_id is treated as a string
+        property_id = str(property_id)
+
+        # Filter the DataFrame based on the propertyId inside 'propertyDetails'
+        house_details = df[df['propertyDetails'].apply(lambda x: x.get('propertyId') == property_id)]
+
+        # Check if a house with the given ID was found
+        if house_details.empty:
+            return jsonify({'error': 'House not found'}), 404
+
+        # Return the first (and only) matching house as a dictionary
+        return jsonify(house_details.iloc[0].to_dict())
+
+    except Exception as e:
+        return jsonify({'error': f"An error occurred: {str(e)}"}), 500
 
 
-# Endpoint for houses filter
-# Endpoint to get houses with advanced filtering
 @app.route('/houses/filter', methods=['GET'])
 def filter_houses():
-    city = request.args.get('city')
-    region = request.args.get('region')
-    type = request.args.get('type')
-    category = request.args.get('category')
-    min_price = request.args.get('min_price')
-    max_price = request.args.get('max_price')
-    min_distance = request.args.get('min_distance')
-    max_distance = request.args.get('max_distance')
-    keywords = request.args.get('keywords')
-    min_rooms = request.args.get('min_rooms')
-    max_rooms = request.args.get('max_rooms')
-    aircondition = request.args.get('aircondition')
-    sort_by = request.args.get('sort_by', 'price')
-    sort_order = request.args.get('sort_order', 'desc')
-    sort_by = request.args.get('sort_by', 'price')
-    sort_order = request.args.get('sort_order', 'desc')
-    min_rooms = request.args.get('min_rooms')
-    max_rooms = request.args.get('max_rooms')
-    min_baths = request.args.get('min_baths')
-    max_baths = request.args.get('max_baths')
-    min_year = request.args.get('min_year')
-    max_year = request.args.get('max_year')
-    features = request.args.getlist('features')
+    try:
+        
+        # Extract query parameters
+        city = request.args.get('city')
+        region = request.args.get('region')
+        house_type = request.args.get('type')
+        keywords = request.args.get('keywords')
+        min_price = request.args.get('min_price')
+        max_price = request.args.get('max_price')
+        min_bedrooms = request.args.get('min_bedrooms')
+        max_bedrooms = request.args.get('max_bedrooms')
+        min_bathrooms = request.args.get('min_bathrooms')
+        max_bathrooms = request.args.get('max_bathrooms')
+        page = int(request.args.get('page', 1))
+        per_page = int(request.args.get('per_page', 10))
+      # # Flatten the nested propertyDetails dictionary
+        df['price'] = df['propertyDetails'].apply(lambda x: x['price'])
+        # df['city'] = df['propertyDetails'].apply(lambda x: x['city'])
+        df['propertyType'] = df['propertyDetails'].apply(lambda x: x['propertyType'])
+        df['bedrooms'] = df['propertyDetails'].apply(lambda x: x['bedrooms'])
+        df['bathrooms'] = df['propertyDetails'].apply(lambda x: x['bathrooms'])
 
-    filtered_df = df.copy()
+        # Create a copy of the DataFrame to filter
+        filtered_df = df.copy()
 
-    # Filter by city
-    if city:
-        filtered_df = filtered_df[filtered_df['City'] == city]
+        # Apply filters conditionally
+        if city:
+            filtered_df = filtered_df[filtered_df['city'].str.contains(city, case=False)]
+            print('city:',city)
+        if region:
+            filtered_df = filtered_df[filtered_df['region'].str.contains(region, case=False)]
+            print('region:',region)
 
-    # Filter by region
-    if region:
-        filtered_df = filtered_df[filtered_df['Region'] == region]
+        if house_type:
+            filtered_df = filtered_df[filtered_df['propertyType'].str.contains(house_type, case=False)]
+            print('house type:',house_type)
 
-    # Filter by type
-    if type:
-        filtered_df = filtered_df[filtered_df['Type'] == type]
+        if keywords:
+            filtered_df = filtered_df[filtered_df['description'].str.lower().str.contains(keywords.lower())] 
+            print('keyword',keywords)
 
-    # Filter by category
-    if category:
-        filtered_df = filtered_df[filtered_df['Category'] == category]
+        if min_price:
+            filtered_df = filtered_df[filtered_df['price'] >= int(min_price)]
+            print('min price',min_price)
 
-    # Filter by price range
-    if min_price:
-        filtered_df = filtered_df[filtered_df['Price'] >= int(min_price)]
-    if max_price:
-        filtered_df = filtered_df[filtered_df['Price'] <= int(max_price)]
+        if max_price:
+            filtered_df = filtered_df[filtered_df['price'] <= int(max_price)]
+            print('max price: ',max_price)
 
-    # Filter by distance (assuming you have latitude and longitude)
-    if min_distance or max_distance:
-        user_location = (float(request.args.get('user_lat')), float(request.args.get('user_lon')))
-        filtered_df['distance'] = filtered_df.apply(lambda row: geopy.distance.geodesic(user_location, (row['Latitude'], row['Longitude'])).km, axis=1) # type: ignore
-        if min_distance:
-            filtered_df = filtered_df[filtered_df['distance'] >= float(min_distance)]
-        if max_distance:
-            filtered_df = filtered_df[filtered_df['distance'] <= float(max_distance)]
+        if min_bedrooms:
+            filtered_df = filtered_df[filtered_df['bedrooms'] >= int(min_bedrooms)]
+            print('min bed room')
 
-    # Filter by keywords (assuming you have a 'Keywords' column)
-    if keywords:
-        filtered_df = filtered_df[filtered_df['Keywords'].str.contains(keywords, case=False)]
+        if max_bedrooms:
+            filtered_df = filtered_df[filtered_df['bedrooms'] <= int(max_bedrooms)]
+            print('max bed')
 
-    filtered_houses = filtered_df.to_dict('records')
-    
-    if min_rooms:
-        filtered_df = filtered_df[filtered_df['Rooms'] >= int(min_rooms)]
-    if max_rooms:
-        filtered_df = filtered_df[filtered_df['Rooms'] <= int(max_rooms)]
+        if min_bathrooms:
+            filtered_df = filtered_df[filtered_df['bathrooms'] >= int(min_bathrooms)]
+            print('max bath')
 
-    # Filter by aircondition
-    if aircondition:
-        filtered_df = filtered_df[filtered_df['Aircondition'] == aircondition]
-    if min_rooms:
-        filtered_df = filtered_df[filtered_df['Rooms'] >= int(min_rooms)]
-    if min_baths:
-        filtered_df = filtered_df[filtered_df['bath'] <= int(max_rooms)]
-    if max_baths:
-        filtered_df = filtered_df[filtered_df['bath'] <= int(max_rooms)]
-    if max_rooms:
-        filtered_df = filtered_df[filtered_df['Rooms'] <= int(max_rooms)]
-    # ... similar for baths and year built
-    # Filter by features
-    if features:
-        for feature in features:
-            filtered_df = filtered_df[filtered_df[feature]]
-            
-    filtered_df = filtered_df.sort_values(by=sort_by, ascending=(sort_order == 'asc'))
-    filtered_houses = filtered_df.to_dict('records')
-    return jsonify(filtered_houses)
+        if max_bathrooms:
+            filtered_df = filtered_df[filtered_df['bathrooms'] <= int(max_bathrooms)]
+            print('min bath')
+
+        # Handle case where no filters are applied
+        if not any([city, region, house_type, keywords, min_price, max_price, 
+                    min_bedrooms, max_bedrooms, min_bathrooms, max_bathrooms]):
+            filtered_df = df.copy() 
+
+        # Pagination
+        total_houses = len(filtered_df)
+        start_index = (page - 1) * per_page
+        end_index = start_index + per_page
+        paginated_houses = filtered_df.iloc[start_index:end_index].to_dict('records')
+
+        # Response
+        return jsonify({
+            "houses": paginated_houses,
+            "total_houses": total_houses,
+            "total_pages": math.ceil(total_houses / per_page),
+            "current_page": page
+        })
+    except ValueError as e:
+        return jsonify({"error": f"Invalid input: {e}"}), 400
+    except Exception as e:
+        return jsonify({"error": f"An error occurred: {e}"}), 500
+
 
 # Endpoint to get houses with pagination
 @app.route('/houses', methods=['GET'])
@@ -197,15 +243,22 @@ def get_houses():
 
     start_index = (page - 1) * per_page
     end_index = start_index + per_page
+    total_houses = len(df)
+    total_pages = math.ceil(total_houses / per_page)
 
     houses = df[start_index:end_index].to_dict('records')
-    return jsonify(houses)
 
-@app.route('/houses/similar/<int:house_id>', methods=['GET'])
+    return jsonify({
+            "houses": houses,
+            "total_pages": total_pages,
+            "current_page": page,
+            "total_houses": total_houses,
+            "per_page": per_page
+        })
+
+@app.route('/houses/similar/<house_id>', methods=['GET'])
 def get_similar_houses_endpoint(house_id):
-    print("-------------------------------------")
-    print(house_id)
-    print("-------------------------------------")
+   
     similar_houses = get_similar_houses(house_id,"houses.json")
     # return jsonify(similar_houses)
     return jsonify(similar_houses)
