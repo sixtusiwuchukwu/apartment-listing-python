@@ -1,4 +1,5 @@
 import json
+import random
 
 # def generate_house_data(num_houses=30):
 #     houses = []
@@ -45,50 +46,149 @@ import json
 #     json.dump(houses_data, f, indent=4)
 import json
 
-def update_data(data):
-    """
-    Updates the given data by adding 'region', 'keywords', and 'city' keys 
-    to each house dictionary.
+# def update_data(data):
+#     """
+#     Updates the given data by adding 'region', 'keywords', and 'city' keys 
+#     to each house dictionary.
 
-    Args:
-        data: A list of dictionaries, where each dictionary represents a house.
+#     Args:
+#         data: A list of dictionaries, where each dictionary represents a house.
 
-    Returns:
-        A list of updated dictionaries with the added keys.
-    """
+#     Returns:
+#         A list of updated dictionaries with the added keys.
+#     """
 
-    updated_data = []  # Create an empty list to store the updated houses
+#     updated_data = []  # Create an empty list to store the updated houses
 
-    for house in data:
-        # Extract city and region from location
-        try:
-            city, region = house['location'].split(', ') 
-        except ValueError:
-            print(f"Error: Invalid location format for house: {house}")
-            city = None
-            region = None
+#     for house in data:
+#         # Extract city and region from location
+#         try:
+#             city, region = house['location'].split(', ') 
+#         except ValueError:
+#             print(f"Error: Invalid location format for house: {house}")
+#             city = None
+#             region = None
 
-        # Extract keywords from description (optional: improve keyword extraction)
-        keywords = house['description'].lower().split() 
+#         # Extract keywords from description (optional: improve keyword extraction)
+#         keywords = house['description'].lower().split() 
 
-        # Create a new dictionary with updated information
-        updated_house = {
-            **house,  # Copy existing key-value pairs
-            'region': region,
-            'city': city,
-            'keywords': keywords
-        }
+#         # Create a new dictionary with updated information
+#         updated_house = {
+#             **house,  # Copy existing key-value pairs
+#             'region': region,
+#             'city': city,
+#             'keywords': keywords
+#         }
 
-        # Append the updated house to the list
-        updated_data.append(updated_house)
+#         # Append the updated house to the list
+#         updated_data.append(updated_house)
 
-    return updated_data
+#     return updated_data
+
+# if __name__ == "__main__":
+#     with open('houses.json', 'r') as f:
+#         data = json.load(f)
+
+#     updated_data = update_data(data)
+
+#     with open('updated_houses.json', 'w') as f:
+#         json.dump(updated_data, f, indent=4)
+        
+        
+        
+        
+     
+
+# def update_house_cities(houses):
+#   """
+#   Updates the 'city' field in each house object with a random Canadian city.
+
+#   Args:
+#     houses: A list of dictionaries, where each dictionary represents a house.
+
+#   Returns:
+#     A list of updated houses with Canadian city names.
+#   """
+
+#   canadian_cities = [
+#       "Toronto", "Montreal", "Vancouver", "Calgary", "Ottawa", 
+#       "Edmonton", "Mississauga", "Brampton", "Hamilton", "Quebec City",
+#       "Winnipeg", "Surrey", "Laval", "Halifax", "Windsor",
+#       "Burnaby", "Richmond", "London", "Kitchener", "Victoria",
+#       "Saskatoon", "Kelowna", "Regina", "Oshawa", "Guelph",
+#       "St. Catharines", "Thunder Bay", "St. John's", "Abbotsford", 
+#       "Markham", "Vaughan", "Barrie", "Moncton", "Kingston",
+#       "Charlottetown", "Whitehorse", "Yellowknife", "Iqaluit",
+#       # Add more Canadian cities if needed
+#   ]
+
+#   for house in houses:
+#     house["city"] = random.choice(canadian_cities)
+
+#   return houses
+
+
+import random
+import random
+
+# def rename_houses(houses):
+#   """
+#   Renames the 'title' field in each house object with a more creative name.
+
+#   Args:
+#     houses: A list of dictionaries, where each dictionary represents a house.
+
+#   Returns:
+#     A list of updated houses with creative names.
+#   """
+
+#   house_names = [
+#       "The Haven", "Sunnyside Cottage", "Oakwood Manor", "Willow Creek", 
+#       "Riverbend Retreat", "Cedarwood Lodge", "Windswept Cottage", 
+#       "Stonehaven", "Meadowbrook", "Bluebird Haven",
+#       "Green Gables", "The Burrow", "Hillside Manor", "Harbor View", 
+#       "Whispering Pines", "Starlight Cottage", "Golden Oak", 
+#       "The Croft", "Woodland Retreat", "Seabreeze Cottage",
+#       "Lakeside Lodge", "Forest Glen", "Sunstone Villa", "Azure Waters",
+#       "Crimson Ridge", "Emerald Vale", "Silverwood", "Amberstone",
+#       # Add more house names if needed
+#   ]
+
+#   for house in houses:
+#     house["title"] = random.choice(house_names)
+
+#   return houses
+
+from faker import Faker
+
+def update_house_addresses(houses):
+  """
+  Updates the 'address' field in each house object with a more realistic Canadian address.
+
+  Args:
+    houses: A list of dictionaries, where each dictionary represents a house.
+
+  Returns:
+    A list of updated houses with Canadian addresses.
+  """
+
+  fake = Faker('en_CA') 
+
+  for house in houses:
+    house["address"] = fake.street_address() 
+
+  return houses
+
+
+
 
 if __name__ == "__main__":
     with open('houses.json', 'r') as f:
         data = json.load(f)
 
-    updated_data = update_data(data)
+    updated_data = update_house_addresses(data)
+    print(updated_data)
 
     with open('updated_houses.json', 'w') as f:
         json.dump(updated_data, f, indent=4)
+   

@@ -21,6 +21,7 @@ CORS(app)
 # Load the house price data
 with open('houses.json', 'r') as f:
   data = json.load(f)
+ 
 df = pd.DataFrame(data)
 
 
@@ -59,6 +60,8 @@ import json
 import pandas as pd
 
 import pandas as pd
+
+
 
 def get_similar_houses(house_id, houses_file, page=1, page_size=2):
     """
@@ -149,74 +152,46 @@ def get_house_details(property_id):
 @app.route('/houses/filter', methods=['GET'])
 def filter_houses():
     try:
-        
         # Extract query parameters
         city = request.args.get('city')
-        region = request.args.get('region')
-        house_type = request.args.get('type')
-        keywords = request.args.get('keywords')
-        min_price = request.args.get('min_price')
-        max_price = request.args.get('max_price')
-        min_bedrooms = request.args.get('min_bedrooms')
-        max_bedrooms = request.args.get('max_bedrooms')
-        min_bathrooms = request.args.get('min_bathrooms')
-        max_bathrooms = request.args.get('max_bathrooms')
+        bedrooms = request.args.get('bedrooms')
+        bathrooms = request.args.get('bathrooms')
         page = int(request.args.get('page', 1))
         per_page = int(request.args.get('per_page', 10))
-      # # Flatten the nested propertyDetails dictionary
-        df['price'] = df['propertyDetails'].apply(lambda x: x['price'])
-        # df['city'] = df['propertyDetails'].apply(lambda x: x['city'])
-        df['propertyType'] = df['propertyDetails'].apply(lambda x: x['propertyType'])
-        df['bedrooms'] = df['propertyDetails'].apply(lambda x: x['bedrooms'])
-        df['bathrooms'] = df['propertyDetails'].apply(lambda x: x['bathrooms'])
 
-        # Create a copy of the DataFrame to filter
+        # Extract necessary fields
+        df['bedrooms'] = df['propertyDetails'].apply(lambda x: x.get('bedrooms', 0) if isinstance(x, dict) else 0)
+        df['bathrooms'] = df['propertyDetails'].apply(lambda x: x.get('bathrooms', 0) if isinstance(x, dict) else 0)
+
+        # Copy the DataFrame for filtering
         filtered_df = df.copy()
 
-        # Apply filters conditionally
+        # Apply filters (order matters)
         if city:
-            filtered_df = filtered_df[filtered_df['city'].str.contains(city, case=False)]
-            print('city:',city)
-        if region:
-            filtered_df = filtered_df[filtered_df['region'].str.contains(region, case=False)]
-            print('region:',region)
+            city = city.strip().lower()
+            filtered_df = filtered_df[filtered_df['city'].str.lower() == city]
 
-        if house_type:
-            filtered_df = filtered_df[filtered_df['propertyType'].str.contains(house_type, case=False)]
-            print('house type:',house_type)
+        if bedrooms:
+            bedrooms = int(bedrooms)
+            filtered_df = filtered_df[filtered_df['bedrooms'] == bedrooms]
 
-        if keywords:
-            filtered_df = filtered_df[filtered_df['description'].str.lower().str.contains(keywords.lower())] 
-            print('keyword',keywords)
-
-        if min_price:
-            filtered_df = filtered_df[filtered_df['price'] >= int(min_price)]
-            print('min price',min_price)
-
-        if max_price:
-            filtered_df = filtered_df[filtered_df['price'] <= int(max_price)]
-            print('max price: ',max_price)
-
-        if min_bedrooms:
-            filtered_df = filtered_df[filtered_df['bedrooms'] >= int(min_bedrooms)]
-            print('min bed room')
-
-        if max_bedrooms:
-            filtered_df = filtered_df[filtered_df['bedrooms'] <= int(max_bedrooms)]
-            print('max bed')
-
-        if min_bathrooms:
-            filtered_df = filtered_df[filtered_df['bathrooms'] >= int(min_bathrooms)]
-            print('max bath')
-
-        if max_bathrooms:
-            filtered_df = filtered_df[filtered_df['bathrooms'] <= int(max_bathrooms)]
-            print('min bath')
+        if bathrooms:
+            bathrooms = int(bathrooms)
+            filtered_df = filtered_df[filtered_df['bathrooms'] == bathrooms]
 
         # Handle case where no filters are applied
-        if not any([city, region, house_type, keywords, min_price, max_price, 
-                    min_bedrooms, max_bedrooms, min_bathrooms, max_bathrooms]):
-            filtered_df = df.copy() 
+        if not any([city, bedrooms, bathrooms]):
+            filtered_df = df.copy()
+
+        # Handle empty results
+        if filtered_df.empty:
+            return jsonify({
+                "houses": [],
+                "total_houses": 0,
+                "total_pages": 0,
+                "current_page": page,
+                "message": "No houses match the specified filters."
+            })
 
         # Pagination
         total_houses = len(filtered_df)
@@ -231,12 +206,11 @@ def filter_houses():
             "total_pages": math.ceil(total_houses / per_page),
             "current_page": page
         })
+
     except ValueError as e:
         return jsonify({"error": f"Invalid input: {e}"}), 400
     except Exception as e:
         return jsonify({"error": f"An error occurred: {e}"}), 500
-
-
 # Endpoint to get houses with pagination
 @app.route('/houses', methods=['GET'])
 def get_houses():
